@@ -8,25 +8,35 @@ public class Game
 	}
 
     //initialize Deck
-    public void initializeDeck(Player player)
+    public void initializeDecks(Player player1, Player player2)
     {
-        Queue<Card> Deck = null;
+        Queue<Card> dealerDeck = new Queue<Card>();
+        Queue<Card> player1Deck = new Queue<Card>();
+        Queue<Card> player2Deck = new Queue<Card>();
 
+        //create deck of all cards.
         //for each card
-        for(int i = 1; i < 14; i++)
+        for(int i = 1; i < 15; i++)
         { 
             //for each suit
-            for(int j = 1; j < 5; i++)
+            for(int j = 1; j < 5; j++)
             {
                 //make card
                 Card c = new Card(i, j);
+                c.toString();
                 //add card to Deck
-                Deck.Enqueue(c);
+                dealerDeck.Enqueue(c);
             }
             
         }
+
+        //shuffle deck
+       // Shuffle(dealerDeck);
+        //Enqueue 26 to both decks
+
         //set deck
-        player.setDeck(Deck);
+       // player2.setDeck(player2Deck);
+       // player1.setDeck(player1Deck);
     }
 
     //Shuffle method

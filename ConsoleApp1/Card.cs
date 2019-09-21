@@ -1,5 +1,5 @@
 ﻿using System;
-//test commit
+
 public class Card
 {
     public Card()
