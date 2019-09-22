@@ -13,7 +13,10 @@ namespace ConsoleApp1
             Player player1 = new Player();
             Player player2 = new Player();
             Game testgame = new Game();
+            Card c = new Card();
             testgame.initializeDecks(player1, player2);
+            player1.toString();
+            player2.toString();
             Console.Read();
 
 

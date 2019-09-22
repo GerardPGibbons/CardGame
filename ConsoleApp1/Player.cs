@@ -34,7 +34,17 @@ public class Player
         Deck = D;
     }
 
-    
+    public void toString()
+    {
+        Console.WriteLine(this.name + " count: " + Deck.Count);
+        Card c = new Card();
+        while(Deck.Count > 0)
+        {
+            c = Deck.Dequeue();
+            c.toString();
+
+        }
+    }
 
 	
 }

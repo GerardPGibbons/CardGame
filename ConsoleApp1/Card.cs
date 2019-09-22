@@ -38,7 +38,7 @@ public class Card
         switch (number)
         {
             case 1:
-                N = "1";
+                N = "Ace";
                 break;
             case 2:
                 N = "2";
@@ -76,9 +76,7 @@ public class Card
             case 13:
                 N = "King";
                 break;
-            case 14:
-                N = "Ace";
-                break;
+            
         }
        Console.WriteLine(N + " of " + S + "\n");
     }
