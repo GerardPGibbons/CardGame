@@ -15,7 +15,11 @@ public class Card
     private int suit;
     private int number;
 
-    public void toString()
+    public int getNumber()
+    {
+        return this.number;
+    }
+    public string toString()
     {
         string N = "";
         string S = "";
@@ -37,47 +41,47 @@ public class Card
         }
         switch (number)
         {
+            
             case 1:
-                N = "Ace";
-                break;
-            case 2:
                 N = "2";
                 break;
-            case 3:
+            case 2:
                 N = "3";
                 break;
-            case 4:
+            case 3:
                 N = "4";
                 break;
-            case 5:
+            case 4:
                 N = "5";
                 break;
-            case 6:
+            case 5:
                 N = "6";
                 break;
-            case 7:
+            case 6:
                 N = "7";
                 break;
-            case 8:
+            case 7:
                 N = "8";
                 break;
-            case 9:
+            case 8:
                 N = "9";
                 break;
-            case 10:
+            case 9:
                 N = "10";
                 break;
-            case 11:
+            case 10:
                 N = "Jack";
                 break;
-            case 12:
+            case 11:
                 N = "Queen";
                 break;
-            case 13:
+            case 12:
                 N = "King";
                 break;
-            
+            case 13:
+                N = "Ace";
+                break;
         }
-       Console.WriteLine(N + " of " + S + "\n");
+        return N + " of " + S + "\n";
     }
 }

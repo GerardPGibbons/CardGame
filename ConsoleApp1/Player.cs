@@ -24,6 +24,11 @@ public class Player
     {
         return name;
     }
+    
+    public void setName(string n)
+    {
+        this.name = n;
+    }
     public Queue<Card> getDeck()
     {
         return Deck;
