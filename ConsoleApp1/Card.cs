@@ -19,6 +19,8 @@ public class Card
     {
         return this.number;
     }
+
+    //Could be optimized to take up less lines. 
     public string toString()
     {
         string N = "";

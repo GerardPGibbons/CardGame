@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 public class Player
 {
+    //Player needs a name.  
+    private string name;
+    //Deck will be FIFO queue. (Since you draw from the top)
+    private Queue<Card> Deck;
+
     //default constructor
     public Player()
     {
         this.name = "Bob";
     }
-
-    //Player needs a name.  
-    private string name;
-    //Deck will be FIFO queue.
-    private Queue<Card> Deck;
 
     public string getName()
     {
@@ -33,6 +33,7 @@ public class Player
         Deck = D;
     }
 
+    //Used for testing decks.
     public void toString()
     {
         Console.WriteLine(this.name + " count: " + Deck.Count);
