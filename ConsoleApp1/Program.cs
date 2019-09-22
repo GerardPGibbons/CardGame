@@ -9,24 +9,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //test init of decks
+            //Initialize players. (playGame will read names)
             Player player1 = new Player();
             Player player2 = new Player();
+            //Initialize Game, (Will also initialize, shuffle, and deal the decks)
             Game testgame = new Game();
             testgame.initializeDecks(player1, player2);
+            //Plays a game of War.
             testgame.playGame(player1, player2);
+
             Console.Read();
-
-
-
-            // 1. Initialize Players (Player Class)
-
-            // 2. Initialize and shuffle decks (Game Class, Card Class)
-
-            // 4. Both players play a round. (Game Class)
-
-            // 7. Repeat until game over.
-
         }
     }
 }

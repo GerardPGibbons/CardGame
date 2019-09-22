@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class Game
 {
+    
     private bool gameOver = false;
 	public Game()
 	{
@@ -60,19 +61,20 @@ public class Game
         int count = D.Count;
         List<Card> deckList = new List<Card>();
        
+        //Convert from FIFO to list
         for(int i = 0; i < count ; i++)
         {
             deckList.Add(D.Dequeue());
            
         }
-
+        //Scramble list.
         while(deckList.Count != 0)
         {
             randIndex = rand.Next(0, deckList.Count);
             shuffledDeck.Add(deckList[randIndex]);
             deckList.RemoveAt(randIndex);
         }
-        
+        //Convert list back to a FIFO
         for(int j = 0; j < shuffledDeck.Count; j++)
         {
             D.Enqueue(shuffledDeck[j]);
@@ -80,13 +82,11 @@ public class Game
         
         return D;
     }
-
+    
     public void playRound(Player player1, Player player2, Queue<Card> cardList)
     {
         Card player1Card = new Card();
         Card player2Card = new Card();
-        
-
         
         if ((player1.getDeck().Count != 0) && (player2.getDeck().Count != 0))
         {
@@ -140,6 +140,7 @@ public class Game
 
     }
 
+    //in case War happens, better to keep a seperate function for recursion reasons.
     public void War(Player player1, Player player2, Queue<Card> cL)
     {
         
@@ -167,20 +168,21 @@ public class Game
                 }
             
         }
-
+        
         playRound(player1, player2, cL);
     }
     public void playGame(Player player1, Player player2)
     {
         int turnCount = 1;
         Queue<Card> cardList = new Queue<Card>();
-
+        
         Console.WriteLine("Player 1 Name: ");
         player1.setName(Console.ReadLine());
         Console.WriteLine("Player 2 Name: ");
         player2.setName(Console.ReadLine());
         Console.WriteLine("Game Start!");
         
+        //while both decks have cards, play a round.
         while(gameOver != true)
         {
             Console.WriteLine("Turn " + turnCount);

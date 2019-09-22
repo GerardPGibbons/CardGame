@@ -9,12 +9,6 @@ public class Player
         this.name = "Bob";
     }
 
-    public Player(string n, Queue<Card> D)
-    {
-        this.Deck = D;
-        this.name = n;
-    }
-
     //Player needs a name.  
     private string name;
     //Deck will be FIFO queue.
